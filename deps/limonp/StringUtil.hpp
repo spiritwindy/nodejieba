@@ -133,7 +133,7 @@ inline std::string& RTrim(std::string& s, char x) {
     s.erase(std::find_if(s.rbegin(), s.rend(),
         [x](unsigned char c) { return !std::isspace(c) && c != x; }).base(), s.end());
 // #else
-    s.erase(std::find_if(s.rbegin(), s.rend(), std::not1(std::bind2nd(std::equal_to<char>(), x))).base(), s.end());
+    // s.erase(std::find_if(s.rbegin(), s.rend(), std::not1(std::bind2nd(std::equal_to<char>(), x))).base(), s.end());
 // #endif
     return s;
 }
