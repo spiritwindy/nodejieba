@@ -5,10 +5,10 @@ import { fileURLToPath } from "node:url";
 // @ts-ignore
 import binary from "@mapbox/node-pre-gyp";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+// const __dirname = dirname(fileURLToPath(import.meta.url));
 const bindingPath = binary.find(resolve(__dirname, "../package.json"));
 
-const require = createRequire(import.meta.url);
+// const require = createRequire(import.meta.url);
 const nodejieba: Record<
   string,
   (...args: unknown[]) => unknown
